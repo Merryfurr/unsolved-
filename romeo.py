@@ -1,14 +1,13 @@
 ## practice with romeo.txt file
 
-print "begin!"
-file = raw_input("Enter file name: ")
+try: input = raw_input
+except NameError: pass
+
+print('begin!')
+print('Enter file name: ')
+file = input()
 input = open(file)
 for line in input:
 	line = line.split()
-	print line
-newlist = []
-print newlist
-for word in line:
-	newlist.append(word)
-	print newlist
-print "done"
+	print(line)
+print('done!')
